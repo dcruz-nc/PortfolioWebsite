@@ -35,7 +35,7 @@ export const About = () => {
 
           {/* Education Section */}
 <div className="rounded-xl p-8 border-white/10 border mb-8 hover:-translate-y-1 transition-all">
-  <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
+  <h3 className="text-xl font-bold mb-4">Education</h3>
 
   {/* University Row */}
   <div className="flex items-center gap-4 mb-2">
