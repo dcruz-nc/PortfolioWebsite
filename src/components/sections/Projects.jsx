@@ -109,31 +109,29 @@ const projectData = [
   color: "purple",
   links: [
     {
-      label: "Frontend",
-      url: "https://github.com/prince21241/se_project_react",
+      label: "Private Repo",
+      url: "https://github.com/dcruz-nc",
     },
   ],
 }
 ,
   {
-    title: "Movie Favorites App",
-    icon: "🎬",
+    title: "TeamThinkTank.",
+    icon: "📝",
     description:
-      "A responsive app using the IMDb API where users can browse and save their favorite movies to a custom list.",
+      "A note-sharing application designed by students for students.",
     tech: [
-      "React",
+      "Bootstrap",
       "HTML5",
       "CSS3",
-      "JavaScript (ES6+)",
-      "API Integration",
+      "JavaScript",
       "Responsive Design",
-      "Hooks",
     ],
     color: "yellow",
     links: [
       {
         label: "View Project",
-        url: "https://github.com/prince21241/Final-Project",
+        url: "https://dcruz-nc.github.io/Team-Think-Tank/",
       },
     ],
   },
