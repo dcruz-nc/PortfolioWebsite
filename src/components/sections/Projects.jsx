@@ -69,57 +69,52 @@ export const Projects = () => {
 // Sample Project Data (for simplicity in mapping)
 const projectData = [
   {
-    title: "Around The U.S.",
-    icon: "🌍",
-    description:
-      "A responsive website that showcases U.S. tourist attractions across devices. Built for mobile, tablet, and desktop platforms.",
-    tech: [
-      "HTML5",
-      "CSS3",
-      "JavaScript (ES6+)",
-      "BEM Methodology",
-      "Responsive Design",
-      "DOM Manipulation",
-      "Form Validation",
-      "CSS Grid",
-      "Flexbox",
-    ],
-    color: "blue",
-    links: [
-      {
-        label: "View Project",
-        url: "https://prince21241.github.io/se_project_aroundtheus/",
-      },
-    ],
-  },
+  title: "VoyagerAI",
+  icon: "🚐",
+  description:
+    "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
+  tech: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Node.js",
+    "MongoDB",
+    "OpenAI API Integration",
+    "BEM Methodology",
+    "Responsive Design",
+    "DOM Manipulation",
+  ],
+  color: "blue",
+  links: [
+    {
+      label: "View Project",
+      url: "https://voyagerai-qxxm.onrender.com/",
+    },
+  ],
+}
+,
   {
-    title: "What to Wear",
-    icon: "🧥",
-    description:
-      "A full-stack weather-based clothing suggestion app. Users can manage clothing items based on weather conditions.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Auth",
-      "REST API",
-      "Responsive Design",
-      "Mongoose",
-      "Context API",
-    ],
-    color: "purple",
-    links: [
-      {
-        label: "Frontend",
-        url: "https://github.com/prince21241/se_project_react",
-      },
-      {
-        label: "Backend",
-        url: "https://github.com/prince21241/se_project_express",
-      },
-    ],
-  },
+  title: "1maginary Online Mobile App",
+  icon: "📻",
+  description:
+    "A full-stack Android application integrated with 1maginary.fm, featuring live radio streaming, real-time chat, user engagement tools like XP and pinned messages, and seamless background audio playback.",
+  tech: [
+    "Java",
+    "Android Development",
+    "Firebase (Auth, Firestore, Storage)",
+    "REST API",
+    "Real-time Chat",
+    "Background Audio Playback",
+  ],
+  color: "purple",
+  links: [
+    {
+      label: "Frontend",
+      url: "https://github.com/prince21241/se_project_react",
+    },
+  ],
+}
+,
   {
     title: "Movie Favorites App",
     icon: "🎬",
@@ -143,26 +138,23 @@ const projectData = [
     ],
   },
   {
-    title: "Coffee Shop",
-    icon: "☕",
+    title: "GraveMan Game",
+    icon: "🎲",
     description:
-      "A stylish landing page for a coffee shop built with semantic HTML and modern CSS techniques.",
+      "A web-based 2D platofrm game where your objective is to reach the end while dodging spooky enemies.",
     tech: [
       "HTML5",
       "CSS3",
-      "BEM",
-      "Flexbox",
-      "Absolute Positioning",
-      "Responsive Design",
-      "CSS Animations",
-      "Forms",
-      "Iframes",
+      "JavaScript",
+      "Video Game Physics",
+      "Sprite Animations",
+      "Level Design & Game Logic"
     ],
     color: "green",
     links: [
       {
         label: "View Project",
-        url: "https://github.com/prince21241/se_project_coffeeshop",
+        url: "https://dcruz-nc.github.io/GraveManGame/",
       },
     ],
   },
