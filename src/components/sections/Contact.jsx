@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import emailjs from "emailjs-com";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,19 +8,29 @@ export const Contact = () => {
     message: "",
   });
 
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
-
+  const DISCORD_WEBHOOK_URL = import.meta.env.VITE_DISCORD_WEBHOOK;
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then(() => {
-        alert("Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
+    const payload = {
+      content: `**New Contact Form Submission**\n**Name:** ${formData.name}\n**Email:** ${formData.email}\n**Message:** ${formData.message}`,
+    };
+
+    fetch(DISCORD_WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Message Sent!");
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
       })
       .catch(() => alert("Oops! Something went wrong. Please try again."));
   };
@@ -44,8 +53,8 @@ export const Contact = () => {
                 name="name"
                 required
                 value={formData.name}
-                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
                 placeholder="Name..."
+                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -59,8 +68,8 @@ export const Contact = () => {
                 name="email"
                 required
                 value={formData.email}
-                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
                 placeholder="example@gmail.com"
+                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -74,8 +83,8 @@ export const Contact = () => {
                 required
                 rows={4}
                 value={formData.message}
-                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10 resize-none"
                 placeholder="Your Message..."
+                className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-white/70 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10 resize-none"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
