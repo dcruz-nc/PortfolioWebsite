@@ -39,11 +39,11 @@ export const About = () => {
 
   {/* University Row */}
   <div className="flex items-center gap-4 mb-2">
-    <img 
+  { /* <img 
       src="src\assets\C_only.png" 
       alt="UNC Charlotte Logo" 
       className="w-12 h-12 object-contain"
-    />
+    /> */}
     <p className="text-gray-300">
       Bachelor of Science in Computer Science - University of North Carolina at Charlotte
     </p>
@@ -51,11 +51,11 @@ export const About = () => {
 
   {/* College Row */}
   <div className="flex items-center gap-4 mb-2">
-    <img 
+   { /* <img 
       src="src\assets\mcc_only.png" 
       alt="Mitchell Community College Logo" 
       className="w-12 h-12 object-contain"
-    />
+    /> */}
     <p className="text-gray-300">
       Associate in Science - Mitchell Community College
     </p>
