@@ -9,12 +9,10 @@ export const Home = () => {
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Hi, I'm Prince Raval
+            Hi, I'm David Cruz
           </h1>
           <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I'm a Full-stack developer who loves to make clean web application,
-            My goal is to Bulid solution that offers Excellent perfromance and
-            wonderful user expercience
+            I’m a Full-stack developer with a B.S. in Computer Science. I’m passionate about creating clean, high-performance solutions that deliver excellent performance and a great user experience.
           </p>
           <div className="flex justify-center space-x-4">
             <a
