@@ -34,15 +34,34 @@ export const About = () => {
           </h2>
 
           {/* Education Section */}
-          <div className="rounded-xl p-8 border-white/10 border mb-8 hover:-translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
-            <p className="text-gray-300 mb-2">
-              Bachelor of Science in Computer Science - University of North Carolina at Charlotte
-            </p>
-            <p className="text-gray-300 mb-2">
-              Associate in Science - Mitchell Community College
-            </p>
-          </div>
+<div className="rounded-xl p-8 border-white/10 border mb-8 hover:-translate-y-1 transition-all">
+  <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
+
+  {/* University Row */}
+  <div className="flex items-center gap-4 mb-2">
+    <img 
+      src="src\assets\C_only.png" 
+      alt="UNC Charlotte Logo" 
+      className="w-12 h-12 object-contain"
+    />
+    <p className="text-gray-300">
+      Bachelor of Science in Computer Science - University of North Carolina at Charlotte
+    </p>
+  </div>
+
+  {/* College Row */}
+  <div className="flex items-center gap-4 mb-2">
+    <img 
+      src="src\assets\mcc_only.png" 
+      alt="Mitchell Community College Logo" 
+      className="w-12 h-12 object-contain"
+    />
+    <p className="text-gray-300">
+      Associate in Science - Mitchell Community College
+    </p>
+  </div>
+</div>
+
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
