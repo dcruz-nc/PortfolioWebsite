@@ -9,9 +9,10 @@ export const Contact = () => {
     message: "",
   });
 
-  const SERVICE_ID = "service_oe6w2cy";
-  const TEMPLATE_ID = "template_dk7beag";
-  const PUBLIC_KEY = "oPfX6CfxMgcq9lwkX";
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
