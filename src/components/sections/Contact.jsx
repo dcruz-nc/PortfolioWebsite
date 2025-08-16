@@ -8,32 +8,22 @@ export const Contact = () => {
     message: "",
   });
 
-  const DISCORD_WEBHOOK_URL = import.meta.env.VITE_DISCORD_WEBHOOK;
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const response = await fetch("/.netlify/functions/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData), // send name, email, message directly
+  });
 
-    const payload = {
-      content: `**New Contact Form Submission**\n**Name:** ${formData.name}\n**Email:** ${formData.email}\n**Message:** ${formData.message}`,
-    };
-
-    fetch(DISCORD_WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Message Sent!");
-          setFormData({ name: "", email: "", message: "" });
-        } else {
-          alert("Oops! Something went wrong. Please try again.");
-        }
-      })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
-  };
+  if (response.ok) {
+    alert("Message Sent!");
+    setFormData({ name: "", email: "", message: "" });
+  } else {
+    alert("Oops! Something went wrong. Please try again.");
+  }
+};
 
   return (
     <section
