@@ -30,15 +30,23 @@ export const Projects = () => {
                     <span
                       key={key}
                       className={`py-1 px-3 rounded-full text-sm transition
-                      ${
-                        project.color === "blue"
-                          ? "bg-blue-500/10 text-blue-400 hover:bg-blue-500/20"
-                          : project.color === "green"
-                          ? "bg-green-500/10 text-green-400 hover:bg-green-500/20"
-                          : project.color === "purple"
-                          ? "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
-                          : "bg-yellow-500/10 text-yellow-400 hover:bg-yellow-500/20"
-                      }`}
+  ${
+    project.color === "blue"
+      ? "bg-blue-500/10 text-blue-400 hover:bg-blue-500/20"
+      : project.color === "green"
+      ? "bg-green-500/10 text-green-400 hover:bg-green-500/20"
+      : project.color === "yellow"
+      ? "bg-yellow-500/10 text-yellow-400 hover:bg-yellow-500/20"
+      : project.color === "purple"
+      ? "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+      : project.color === "pink"
+      ? "bg-pink-500/10 text-pink-400 hover:bg-pink-500/20"
+      : project.color === "orange"
+      ? "bg-orange-500/10 text-orange-400 hover:bg-orange-500/20"
+      : project.color === "cyan"
+      ? "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20"
+      : "bg-gray-500/10 text-gray-400 hover:bg-gray-500/20" // fallback color
+  }`}
                     >
                       {tech}
                     </span>
@@ -69,52 +77,91 @@ export const Projects = () => {
 // Sample Project Data (for simplicity in mapping)
 const projectData = [
   {
-  title: "VoyagerAI",
-  icon: "🚐",
-  description:
-    "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
-  tech: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Node.js",
-    "MongoDB",
-    "OpenAI API Integration",
-    "BEM Methodology",
-    "Responsive Design",
-    "DOM Manipulation",
-  ],
-  color: "blue",
-  links: [
-    {
-      label: "View Project",
-      url: "https://voyagerai-qxxm.onrender.com/",
-    },
-  ],
-}
-,
+    title: "VoyagerAI",
+    icon: "🚐",
+    description:
+      "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "OpenAI API Integration",
+      "BEM Methodology",
+      "Responsive Design",
+      "DOM Manipulation",
+    ],
+    color: "blue",
+    links: [
+      {
+        label: "View Project",
+        url: "https://voyagerai-qxxm.onrender.com/",
+      },
+    ],
+  },
   {
-  title: "1maginary Online Mobile App",
-  icon: "📻",
-  description:
-    "A full-stack Android application integrated with 1maginary.fm, featuring live radio streaming, real-time chat, user engagement tools like XP and pinned messages, and seamless background audio playback.",
-  tech: [
-    "Java",
-    "Android Development",
-    "Firebase (Auth, Firestore, Storage)",
-    "REST API",
-    "Real-time Chat",
-    "Background Audio Playback",
-  ],
-  color: "purple",
-  links: [
-    {
-      label: "Private Repo",
-      url: "https://github.com/dcruz-nc",
-    },
-  ],
-}
-,
+    title: "1maginary Online Mobile App",
+    icon: "📻",
+    description:
+      "A full-stack Android application integrated with 1maginary.fm, featuring live radio streaming, real-time chat, user engagement tools like XP and pinned messages, and seamless background audio playback.",
+    tech: [
+      "Java",
+      "Android Development",
+      "Firebase (Auth, Firestore, Storage)",
+      "REST API",
+      "Real-time Chat",
+      "Background Audio Playback",
+    ],
+    color: "purple",
+    links: [
+      {
+        label: "Private Repo",
+        url: "https://github.com/dcruz-nc",
+      },
+    ],
+  },
+  {
+    title: "Cruz Landscaping",
+    icon: "🌿",
+    description:
+      "A professional landscaping website for Cruz Landscaping featuring service descriptions, image galleries, and seasonal showcases.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "Webhooks",
+    ],
+    color: "green",
+    links: [
+      {
+        label: "View Website",
+        url: "https://cruzlandscaping.netlify.app/",
+      },
+    ],
+  },
+  {
+    title: "GraveMan Game",
+    icon: "🎲",
+    description:
+      "A web-based 2D platform game where your objective is to reach the end while dodging spooky enemies.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Video Game Physics",
+      "Sprite Animations",
+      "Level Design & Game Logic",
+    ],
+    color: "pink",
+    links: [
+      {
+        label: "View Project",
+        url: "https://gravemangame.netlify.app/",
+      },
+    ],
+  },
   {
     title: "TeamThinkTank.",
     icon: "📝",
@@ -135,25 +182,5 @@ const projectData = [
       },
     ],
   },
-  {
-    title: "GraveMan Game",
-    icon: "🎲",
-    description:
-      "A web-based 2D platofrm game where your objective is to reach the end while dodging spooky enemies.",
-    tech: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Video Game Physics",
-      "Sprite Animations",
-      "Level Design & Game Logic"
-    ],
-    color: "green",
-    links: [
-      {
-        label: "View Project",
-        url: "https://gravemangame.netlify.app/",
-      },
-    ],
-  },
 ];
+
