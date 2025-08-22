@@ -152,7 +152,7 @@ const projectData = [
     links: [
       {
         label: "View Project",
-        url: "https://dcruz-nc.github.io/GraveManGame/",
+        url: "https://gravemangame.netlify.app/",
       },
     ],
   },
