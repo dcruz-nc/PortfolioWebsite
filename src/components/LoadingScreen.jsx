@@ -23,15 +23,18 @@ export const LoadingScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center">
-      <div className="mb-4 text-4xl font-mono font-bold">
-        {text}
-        <span className="animate-blink ml-1">|</span>
+    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center">
+      {/* Content */}
+      <div className="text-center">
+        <div className="mb-8 text-5xl font-mono font-bold text-white/90 backdrop-blur-sm bg-white/5 px-8 py-4 rounded-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          {text}
+          <span className="animate-blink ml-2 text-blue-400 backdrop-blur-sm bg-blue-500/10 px-2 py-1 rounded-lg border border-blue-400/20">|</span>
+        </div>
       </div>
-
-      <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
-        <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar" />
-      </div>
+      
+      {/* Background decorative elements */}
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-cyan-500/5 rounded-full blur-3xl"></div>
     </div>
   );
 };
