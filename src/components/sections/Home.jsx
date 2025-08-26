@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import DarkVeil from "../WebGLDarkVeil";
 
 export const Home = () => {
   return (
@@ -6,13 +7,25 @@ export const Home = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative"
     >
+      {/* DarkVeil as background */}
+      <div style={{ 
+        position: 'absolute', 
+        top: 0, 
+        left: 0, 
+        width: '100%', 
+        height: '100%', 
+        zIndex: 0 
+      }}>
+        <DarkVeil />
+      </div>
+      
       <RevealOnScroll>
-        <div className="text-center z-10 px-4">
+        <div className="text-center z-10 px-4 relative">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
             Hi, I'm David Cruz
           </h1>
           <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I’m a Full-stack developer with a B.S. in Computer Science. I’m passionate about creating clean, high-performance solutions that deliver excellent performance and a great user experience.
+            I'm a Full-stack developer with a B.S. in Computer Science. I'm passionate about creating clean, high-performance solutions that deliver excellent performance and a great user experience.
           </p>
           <div className="flex justify-center space-x-4">
             <a

@@ -9,6 +9,7 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import { CustomCursor } from "./components/CustomCursor";
+import DarkVeil from "./components/WebGLDarkVeil";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +25,7 @@ function App() {
       >
         <CustomCursor />
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={menuOpen} />
         <Home />
         <About />
         <Projects />
