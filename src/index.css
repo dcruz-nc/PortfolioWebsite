@@ -7,33 +7,6 @@ body {
   font-family: "Space Grotsk", sans-serif;
   background: #0a0a0a;
   color: #f3f4f6;
-  cursor: none; /* Hide default cursor */
-}
-
-/* Custom Cursor */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease;
-  mix-blend-mode: difference;
-}
-
-.custom-cursor.clicked {
-  transform: scale(2);
-  transition: transform 0.15s ease;
-}
-
-/* Show default cursor on interactive elements */
-a, button, input, textarea, [role="button"] {
-  cursor: none;
 }
 
 @layer utilities {
