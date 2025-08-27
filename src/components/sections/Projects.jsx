@@ -80,26 +80,22 @@ export const Projects = () => {
 // Sample Project Data (for simplicity in mapping)
 const projectData = [
   {
-    title: "VoyagerAI",
-    icon: "🚐",
+    title: "Cruz Landscaping",
+    icon: "🌿",
     description:
-      "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
+      "A professional landscaping website for Cruz Landscaping featuring service descriptions, image galleries, and seasonal showcases.",
     tech: [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "Node.js",
-      "MongoDB",
-      "OpenAI API Integration",
-      "BEM Methodology",
       "Responsive Design",
-      "DOM Manipulation",
+      "Webhooks",
     ],
-    color: "blue",
+    color: "green",
     links: [
       {
-        label: "View Project",
-        url: "https://voyagerai-qxxm.onrender.com/",
+        label: "View Website",
+        url: "https://cruzlandscaping.netlify.app/",
       },
     ],
   },
@@ -125,22 +121,26 @@ const projectData = [
     ],
   },
   {
-    title: "Cruz Landscaping",
-    icon: "🌿",
+    title: "VoyagerAI",
+    icon: "🚐",
     description:
-      "A professional landscaping website for Cruz Landscaping featuring service descriptions, image galleries, and seasonal showcases.",
+      "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
     tech: [
       "HTML5",
       "CSS3",
       "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "OpenAI API Integration",
+      "BEM Methodology",
       "Responsive Design",
-      "Webhooks",
+      "DOM Manipulation",
     ],
-    color: "green",
+    color: "blue",
     links: [
       {
-        label: "View Website",
-        url: "https://cruzlandscaping.netlify.app/",
+        label: "View Project",
+        url: "https://voyagerai-qxxm.onrender.com/",
       },
     ],
   },
