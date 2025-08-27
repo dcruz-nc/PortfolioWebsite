@@ -121,7 +121,7 @@ const projectData = [
     ],
   },
   {
-    title: "VoyagerAI",
+    title: "VoyagerAI (In Progress)",
     icon: "🚐",
     description:
       "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users.",
@@ -130,6 +130,7 @@ const projectData = [
       "CSS3",
       "JavaScript",
       "Node.js",
+      "Express.js",
       "MongoDB",
       "OpenAI API Integration",
       "BEM Methodology",
@@ -140,7 +141,7 @@ const projectData = [
     links: [
       {
         label: "View Project",
-        url: "https://voyagerai-qxxm.onrender.com/",
+        url: "https://voyagerai2.onrender.com/",
       },
     ],
   },
