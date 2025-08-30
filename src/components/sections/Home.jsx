@@ -1,18 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import DarkVeil from "../WebGLDarkVeil";
-import { useEffect, useState } from "react";
 
 export const Home = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   return (
     <section
@@ -39,15 +28,7 @@ export const Home = () => {
         <div className="absolute top-1/2 right-8 md:top-1/2 md:right-20 w-16 h-16 md:w-20 md:h-20 border border-white/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
       </div>
 
-      {/* Interactive cursor follower - Hidden on mobile */}
-      <div 
-        className="hidden md:block fixed w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100 ease-out"
-        style={{
-          left: mousePosition.x - 8,
-          top: mousePosition.y - 8,
-          transform: 'scale(1)',
-        }}
-      />
+
 
       <RevealOnScroll>
         <div className="text-center z-10 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 relative max-w-6xl mx-auto">
