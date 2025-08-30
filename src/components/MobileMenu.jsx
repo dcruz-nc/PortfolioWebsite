@@ -1,67 +1,122 @@
 import { useEffect } from "react";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+  const menuItems = [
+    { href: "#home", label: "Home", icon: "🏠", description: "Welcome to my portfolio" },
+    { href: "#about", label: "About", icon: "👨‍💻", description: "Learn more about me" },
+    { href: "#projects", label: "Projects", icon: "🚀", description: "View my work" },
+    { href: "#contact", label: "Contact", icon: "📧", description: "Get in touch" }
+  ];
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest('.mobile-menu')) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [menuOpen, setMenuOpen]);
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
-        transition-all duration-300 ease-in-out
-        ${
-          menuOpen
-            ? "h-screen opacity-100 pointer-events-auto"
-            : "h-0 opacity-0 pointer-events-none"
-        }`}
+      className={`mobile-menu fixed top-0 left-0 w-full h-screen z-30 transition-all duration-500 ease-out
+        ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
-      <button
+      {/* Backdrop with gradient */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-blue-900/80 backdrop-blur-2xl transition-all duration-500 ease-out
+          ${menuOpen ? "opacity-100" : "opacity-0"}`}
         onClick={() => setMenuOpen(false)}
-        className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer"
-        aria-label="Close Menu"
-      >
-        &times;
-      </button>
+      ></div>
 
-      <a
-        href="#home"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-          ${
-            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-      >
-        Home
-      </a>
+      {/* Menu Container */}
+      <div className={`relative z-40 h-full flex flex-col items-center justify-center transition-all duration-700 ease-out
+        ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+        
+        {/* Enhanced Close Button */}
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl focus:outline-none cursor-pointer hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 group"
+          aria-label="Close Menu"
+        >
+          <div className="flex items-center justify-center">
+            <span className="group-hover:rotate-90 transition-transform duration-300">×</span>
+          </div>
+        </button>
 
-      <a
-        href="#about"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-          ${
-            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-      >
-        About
-      </a>
+        {/* Menu Header */}
+        <div className="text-center mb-12 px-6">
+          <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25">
+            <span className="text-white text-2xl font-bold">DC</span>
+          </div>
+          <h2 className="text-white text-2xl font-bold mb-2">David Cruz</h2>
+          <p className="text-blue-300 text-sm font-medium">Full-Stack Developer</p>
+        </div>
 
-      <a
-        href="#projects"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-          ${
-            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-      >
-        Projects
-      </a>
+        {/* Menu Items */}
+        <div className="w-full max-w-sm px-6 space-y-4">
+          {menuItems.map((item, index) => (
+            <div
+              key={item.href}
+              className={`transform transition-all duration-500 ease-out delay-${index * 100}
+                ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"}`}
+            >
+              <a
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="group block w-full p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
+              >
+                <div className="flex items-center space-x-4">
+                  {/* Icon Container */}
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-400/20 border border-blue-400/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-xl">{item.icon}</span>
+                  </div>
+                  
+                  {/* Text Content */}
+                  <div className="flex-1 text-left">
+                    <h3 className="text-white text-lg font-semibold group-hover:text-blue-300 transition-colors duration-300">
+                      {item.label}
+                    </h3>
+                    <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Arrow Icon */}
+                  <div className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 group-hover:w-full rounded-full"></div>
+              </a>
+            </div>
+          ))}
+        </div>
 
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-          ${
-            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-      >
-        Contact
-      </a>
+        {/* Footer Section */}
+        <div className={`mt-12 text-center px-6 transition-all duration-700 ease-out delay-500
+          ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full border border-white/10">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-gray-300 font-medium text-sm">Available for opportunities</span>
+          </div>
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-1/4 left-8 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl opacity-0 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-8 w-24 h-24 bg-cyan-500/10 rounded-full blur-3xl opacity-0 animate-pulse"></div>
+      </div>
+
+      {/* Bottom Gradient Line */}
+      <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 transition-all duration-700 ease-out
+        ${menuOpen ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`}></div>
     </div>
   );
 };
