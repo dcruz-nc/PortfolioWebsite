@@ -25,6 +25,10 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     return 0.1;
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className="fixed top-0 w-full z-40 bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
       <div className="max-w-5xl mx-auto px-4">
@@ -33,12 +37,18 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             David<span className="text-blue-500 hover:text-cyan-400 transition-colors duration-300">.Cruz</span>
           </a>
 
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden text-white hover:text-blue-400 transition-colors duration-300"
-            onClick={() => setMenuOpen((prev) => !prev)}
+          <button
+            className="w-7 h-5 relative cursor-pointer z-40 md:hidden text-white hover:text-blue-400 transition-colors duration-300 focus:outline-none"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
-            &#9776;
-          </div>
+            {menuOpen ? (
+              <span className="text-xl">✕</span>
+            ) : (
+              <span className="text-xl">☰</span>
+            )}
+          </button>
 
           <div className="hidden md:flex item-center space-x-8">
             {navItems.map((item, index) => (

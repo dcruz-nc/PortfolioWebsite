@@ -20,26 +20,42 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen, setMenuOpen]);
 
+  // Close menu when pressing Escape key
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [menuOpen, setMenuOpen]);
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div
-      className={`mobile-menu fixed top-0 left-0 w-full h-screen z-30 transition-all duration-500 ease-out
+      className={`mobile-menu fixed top-0 left-0 w-full h-screen z-50 transition-all duration-500 ease-out
         ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
       {/* Backdrop with gradient */}
       <div 
         className={`absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-blue-900/80 backdrop-blur-2xl transition-all duration-500 ease-out
           ${menuOpen ? "opacity-100" : "opacity-0"}`}
-        onClick={() => setMenuOpen(false)}
+        onClick={handleClose}
       ></div>
 
       {/* Menu Container */}
-      <div className={`relative z-40 h-full flex flex-col items-center justify-center transition-all duration-700 ease-out
+      <div className={`relative z-50 h-full flex flex-col items-center justify-center transition-all duration-700 ease-out
         ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
         
         {/* Enhanced Close Button */}
         <button
-          onClick={() => setMenuOpen(false)}
-          className="absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl focus:outline-none cursor-pointer hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 group"
+          onClick={handleClose}
+          className="absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl focus:outline-none cursor-pointer hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 group z-50"
           aria-label="Close Menu"
         >
           <div className="flex items-center justify-center">
@@ -66,7 +82,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             >
               <a
                 href={item.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={handleClose}
                 className="group block w-full p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
               >
                 <div className="flex items-center space-x-4">
