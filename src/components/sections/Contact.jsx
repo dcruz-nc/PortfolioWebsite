@@ -123,19 +123,41 @@ export const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information Section */}
             <div className="lg:col-span-1 space-y-8">
-              {/* Personal Introduction */}
-              <div className="rounded-3xl p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
-                    👨‍💻
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">David Cruz</h3>
-                  <p className="text-blue-400 font-medium">Full-Stack Developer</p>
-                </div>
-                <p className="text-gray-300 text-center leading-relaxed">
-                  Passionate about creating innovative solutions and always eager to take on new challenges. Let's discuss how we can work together!
-                </p>
-              </div>
+                             {/* Personal Introduction */}
+               <div className="rounded-3xl p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]">
+                 <div className="text-center mb-6">
+                   <div className="w-32 h-32 rounded-full mb-4 mx-auto overflow-hidden border-2 border-blue-400/30 shadow-lg">
+                     <img 
+                       src="/hsprofile.png" 
+                       alt="David Cruz - Full-Stack Developer" 
+                       className="w-full h-full object-cover"
+                       style={{ 
+                         imageRendering: 'high-quality',
+                         transform: 'scale(1.2)',
+                         transformOrigin: 'center'
+                       }}
+                     />
+                   </div>
+                   <h3 className="text-2xl font-bold text-white mb-2">David Cruz</h3>
+                   <p className="text-blue-400 font-medium">Full-Stack Developer</p>
+                 </div>
+                 <p className="text-gray-300 text-center leading-relaxed mb-6">
+                   Passionate about creating innovative solutions and always eager to take on new challenges. Let's discuss how we can work together!
+                 </p>
+                 
+                 {/* Availability Status - Moved Inside Profile Box */}
+                 <div className="rounded-2xl p-4 bg-gradient-to-r from-green-500/10 to-green-600/10 backdrop-blur-sm border border-green-500/20">
+                   <div className="flex items-center justify-center gap-3 mb-2">
+                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                     <span className="text-green-300 font-semibold text-sm uppercase tracking-wider">
+                       Available for Opportunities
+                     </span>
+                   </div>
+                   <p className="text-gray-300 text-xs text-center">
+                     Currently accepting new projects and full-time opportunities
+                   </p>
+                 </div>
+               </div>
 
               {/* Contact Methods */}
               <div className="space-y-4">
@@ -165,18 +187,7 @@ export const Contact = () => {
                 ))}
               </div>
 
-              {/* Availability Status */}
-              <div className="rounded-2xl p-6 bg-gradient-to-r from-green-500/10 to-green-600/10 backdrop-blur-sm border border-green-500/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-300 font-semibold text-sm uppercase tracking-wider">
-                    Available for Opportunities
-                  </span>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Currently accepting new projects and full-time opportunities
-                </p>
-              </div>
+
             </div>
 
             {/* Enhanced Contact Form */}
