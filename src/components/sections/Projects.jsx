@@ -244,7 +244,6 @@ const projectData = [
       "Responsive Design",
       "Modern UI/UX",
       "Performance Optimization",
-      "Image Galleries",
       "Contact Integration"
     ]
   },
