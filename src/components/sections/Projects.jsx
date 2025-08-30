@@ -15,7 +15,12 @@ export const Projects = () => {
 
   const filteredProjects = activeFilter === "all" 
     ? projectData 
-    : projectData.filter(project => project.category === activeFilter);
+    : projectData.filter(project => {
+        if (Array.isArray(project.category)) {
+          return project.category.includes(activeFilter);
+        }
+        return project.category === activeFilter;
+      });
 
   return (
     <section
@@ -270,7 +275,7 @@ const projectData = [
     description: "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users with intelligent matching algorithms.",
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "MongoDB", "OpenAI API", "BEM Methodology"],
     color: "blue",
-    category: "ai",
+    category: ["ai", "web"],
     status: "in-progress",
     links: [
       {
@@ -307,27 +312,6 @@ const projectData = [
       "Sprite Animations"
     ]
   },
-  {
-    title: "TeamThinkTank",
-    subtitle: "Student Note-Sharing Platform",
-    icon: "📝",
-    description: "A collaborative note-sharing application designed by students for students, featuring real-time collaboration and organized knowledge management.",
-    tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    color: "yellow",
-    category: "web",
-    status: "completed",
-    links: [
-      {
-        label: "View Project",
-        url: "https://dcruz-nc.github.io/Team-Think-Tank/",
-        icon: "📚"
-      },
-    ],
-    highlights: [
-      "Collaborative Features",
-      "Real-time Updates",
-      "Student-Focused Design"
-    ]
-  },
+
 ];
 
