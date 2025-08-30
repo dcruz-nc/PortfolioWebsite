@@ -50,51 +50,51 @@ export const About = () => {
             </h3>
 
             <div className="space-y-8">
-              {/* University Row */}
-              <div className="relative">
-                <div className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 backdrop-blur-sm border border-blue-500/20 hover:bg-gradient-to-r hover:from-blue-500/15 hover:to-blue-600/15 hover:border-blue-400/30 transition-all duration-500 group">
-                  <div className="relative">
-                    <img 
-                      src="/C_only.png" 
-                      alt="UNC Charlotte Logo" 
-                      className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-2xl font-bold text-white mb-2">Bachelor of Science in Computer Science</h4>
-                    <p className="text-blue-300 text-lg font-medium">University of North Carolina at Charlotte</p>
-                    
-                  </div>
-                  <div className="text-right">
-                    <div className="text-blue-400 text-sm font-medium">2023 - 2025</div>
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2"></div>
-                  </div>
-                </div>
-              </div>
+                             {/* University Row */}
+               <div className="relative">
+                 <div className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-[#0A5F38]/10 to-[#0A5F38]/20 backdrop-blur-sm border border-[#0A5F38]/30 hover:bg-gradient-to-r hover:from-[#0A5F38]/15 hover:to-[#0A5F38]/25 hover:border-[#0A5F38]/40 transition-all duration-500 group">
+                   <div className="relative">
+                     <img 
+                       src="/C_only.png" 
+                       alt="UNC Charlotte Logo" 
+                       className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                     />
+                     <div className="absolute inset-0 bg-[#0A5F38]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                   </div>
+                   <div className="flex-1">
+                     <h4 className="text-2xl font-bold text-white mb-2">Bachelor of Science in Computer Science</h4>
+                     <p className="text-[#0A5F38] text-lg font-medium">University of North Carolina at Charlotte</p>
+                     <p className="text-gray-400 text-sm mt-1">Concentration in Web/Mobile Development & Software Engineering</p>
+                   </div>
+                   <div className="text-right">
+                     <div className="text-[#0A5F38] text-sm font-medium">2023 - 2025</div>
+                     <div className="w-3 h-3 bg-[#0A5F38] rounded-full mt-2"></div>
+                   </div>
+                 </div>
+               </div>
 
-              {/* College Row */}
-              <div className="relative">
-                <div className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-green-600/10 backdrop-blur-sm border border-green-500/20 hover:bg-gradient-to-r hover:from-green-500/15 hover:to-green-600/15 hover:border-green-400/30 transition-all duration-500 group">
-                  <div className="relative">
-                    <img 
-                      src="/mcc_only.png" 
-                      alt="Mitchell Community College Logo" 
-                      className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-green-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-2xl font-bold text-white mb-2">Associate in Science</h4>
-                    <p className="text-green-300 text-lg font-medium">Mitchell Community College</p>
-                    <p className="text-gray-400 text-sm mt-1">Dean's List</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-green-400 text-sm font-medium">2020 - 2023</div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full mt-2"></div>
-                  </div>
-                </div>
-              </div>
+                             {/* College Row */}
+               <div className="relative">
+                 <div className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-[#990F4B]/10 to-[#990F4B]/20 backdrop-blur-sm border border-[#990F4B]/30 hover:bg-gradient-to-r hover:from-[#990F4B]/15 hover:to-[#990F4B]/25 hover:border-[#990F4B]/40 transition-all duration-500 group">
+                   <div className="relative">
+                     <img 
+                       src="/mcc_only.png" 
+                       alt="Mitchell Community College Logo" 
+                       className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                     />
+                     <div className="absolute inset-0 bg-[#990F4B]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                   </div>
+                   <div className="flex-1">
+                     <h4 className="text-2xl font-bold text-white mb-2">Associate in Science</h4>
+                     <p className="text-[#990F4B] text-lg font-medium">Mitchell Community College</p>
+                     <p className="text-gray-400 text-sm mt-1">Dean's List</p>
+                   </div>
+                   <div className="text-right">
+                     <div className="text-[#990F4B] text-sm font-medium">2020 - 2023</div>
+                     <div className="w-3 h-3 bg-[#990F4B] rounded-full mt-2"></div>
+                   </div>
+                 </div>
+               </div>
             </div>
           </div>
 
