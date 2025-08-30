@@ -79,8 +79,8 @@ export const Projects = () => {
                 onMouseEnter={() => setHoveredProject(project.title)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
-                {/* Enhanced Project Card */}
-                <div className="relative rounded-3xl p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500 overflow-hidden">
+                                 {/* Enhanced Project Card */}
+                 <div className="relative rounded-3xl p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500 overflow-hidden flex flex-col h-full">
                   {/* Background pattern */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)] opacity-30"></div>
                   
@@ -143,8 +143,8 @@ export const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Project Links */}
-                  <div className="flex flex-wrap gap-4">
+                                     {/* Project Links */}
+                   <div className="flex flex-wrap gap-4 mt-auto">
                     {project.links.map((link, key) => (
                       <a
                         key={key}
@@ -228,8 +228,8 @@ const projectData = [
     title: "Cruz Landscaping",
     subtitle: "Professional Business Website",
     icon: "🌿",
-    description: "A professional landscaping website for Cruz Landscaping featuring service descriptions, image galleries, and seasonal showcases with modern responsive design.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Webhooks"],
+    description: "A professional landscaping website for Cruz Landscaping featuring comprehensive service descriptions, interactive image galleries, seasonal showcases, contact forms, and modern responsive design optimized for all devices.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Webhooks", "Image Optimization", "Contact Forms"],
     color: "green",
     category: "web",
     status: "completed",
@@ -243,7 +243,9 @@ const projectData = [
     highlights: [
       "Responsive Design",
       "Modern UI/UX",
-      "Performance Optimization"
+      "Performance Optimization",
+      "Image Galleries",
+      "Contact Integration"
     ]
   },
   {
