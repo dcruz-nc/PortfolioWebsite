@@ -126,18 +126,16 @@ export const Contact = () => {
                              {/* Personal Introduction */}
                <div className="rounded-3xl p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]">
                  <div className="text-center mb-6">
-                   <div className="w-32 h-32 rounded-full mb-4 mx-auto overflow-hidden border-2 border-blue-400/30 shadow-lg">
-                     <img 
-                       src="/hsprofile.png" 
-                       alt="David Cruz - Full-Stack Developer" 
-                       className="w-full h-full object-cover"
-                       style={{ 
-                         imageRendering: 'high-quality',
-                         transform: 'scale(1.2)',
-                         transformOrigin: 'center'
-                       }}
-                     />
-                   </div>
+                                       <div className="w-40 h-59 mb-4 mx-auto overflow-hidden rounded-2xl border-2 border-blue-400/30 shadow-lg">
+                      <img 
+                        src="/hsprofile.webp" 
+                        alt="David Cruz - Full-Stack Developer" 
+                        className="w-full h-full object-contain"
+                        style={{ 
+                          imageRendering: 'high-quality'
+                        }}
+                      />
+                    </div>
                    <h3 className="text-2xl font-bold text-white mb-2">David Cruz</h3>
                    <p className="text-blue-400 font-medium">Full-Stack Developer</p>
                  </div>
