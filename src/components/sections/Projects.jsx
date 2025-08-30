@@ -252,7 +252,7 @@ const projectData = [
     subtitle: "Full-Stack Android Application",
     icon: "📻",
     description: "A full-stack Android application integrated with 1maginary.fm, featuring live radio streaming, real-time chat, user engagement tools like XP and pinned messages, and seamless background audio playback.",
-    tech: ["Java", "Android Development", "Firebase", "REST API", "Real-time Chat", "Background Audio"],
+    tech: ["Java", "Android Development", "Firebase", "REST API", "Real-time Chat"],
     color: "purple",
     category: "mobile",
     status: "completed",
