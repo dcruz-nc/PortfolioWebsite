@@ -52,12 +52,12 @@ export const About = () => {
             <div className="space-y-6 sm:space-y-8">
                              {/* University Row - Mobile optimized */}
                <div className="relative">
-                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0A5F38]/10 to-[#0A5F38]/20 backdrop-blur-sm border border-[#0A5F38]/30 hover:bg-gradient-to-r hover:from-[#0A5F38]/15 hover:to-[#0A5F38]/25 hover:border-[#0A5F38]/40 transition-all duration-500 group">
-                   <div className="relative flex-shrink-0">
+                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0A5F38]/10 to-[#0A5F38]/20 backdrop-blur-sm border border-[#0A5F38]/30 hover:bg-gradient-to-r hover:from-[#0A5F38]/15 hover:to-[#0A5F38]/25 hover:border-[#0A5F38]/40 transition-all duration-500 group">
+                   <div className="relative flex-shrink-0 self-center">
                      <img 
                        src="/C_only.png" 
                        alt="UNC Charlotte Logo" 
-                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 mx-auto"
                      />
                      <div className="absolute inset-0 bg-[#0A5F38]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                    </div>
@@ -66,21 +66,21 @@ export const About = () => {
                      <p className="text-[#0A5F38] text-base sm:text-lg font-medium">University of North Carolina at Charlotte</p>
                      <p className="text-gray-400 text-xs sm:text-sm mt-1">Concentration in Web/Mobile Development & Software Engineering</p>
                    </div>
-                   <div className="text-center sm:text-right flex-shrink-0">
+                   <div className="text-center sm:text-right flex-shrink-0 self-center">
                      <div className="text-[#0A5F38] text-xs sm:text-sm font-medium">2023 - 2025</div>
-                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#0A5F38] rounded-full mt-2 mx-auto sm:mx-0"></div>
+                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#0A5F38] rounded-full mt-2 mx-auto sm:ml-auto sm:mr-0"></div>
                    </div>
                  </div>
                </div>
 
                              {/* College Row - Mobile optimized */}
                <div className="relative">
-                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#990F4B]/10 to-[#990F4B]/20 backdrop-blur-sm border border-[#990F4B]/30 hover:bg-gradient-to-r hover:from-[#990F4B]/15 hover:to-[#990F4B]/25 hover:border-[#990F4B]/40 transition-all duration-500 group">
-                   <div className="relative flex-shrink-0">
+                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#990F4B]/10 to-[#990F4B]/20 backdrop-blur-sm border border-[#990F4B]/30 hover:bg-gradient-to-r hover:from-[#990F4B]/15 hover:to-[#990F4B]/25 hover:border-[#990F4B]/40 transition-all duration-500 group">
+                   <div className="relative flex-shrink-0 self-center">
                      <img 
                        src="/mcc_only.png" 
                        alt="Mitchell Community College Logo" 
-                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 mx-auto"
                      />
                      <div className="absolute inset-0 bg-[#990F4B]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                    </div>
@@ -89,9 +89,9 @@ export const About = () => {
                      <p className="text-[#990F4B] text-base sm:text-lg font-medium">Mitchell Community College</p>
                      <p className="text-gray-400 text-xs sm:text-sm mt-1">Dean's List</p>
                    </div>
-                   <div className="text-center sm:text-right flex-shrink-0">
+                   <div className="text-center sm:text-right flex-shrink-0 self-center">
                      <div className="text-[#990F4B] text-xs sm:text-sm font-medium">2020 - 2023</div>
-                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#990F4B] rounded-full mt-2 mx-auto sm:mx-0"></div>
+                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#990F4B] rounded-full mt-2 mx-auto sm:ml-auto sm:mr-0"></div>
                    </div>
                  </div>
                </div>
