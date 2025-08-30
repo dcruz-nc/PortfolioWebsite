@@ -183,7 +183,7 @@ export const About = () => {
                     <h4 className="text-lg sm:text-xl font-bold text-white">Mobile Development</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
-                    {['Android Development', 'JavaFX', 'Responsive Design', 'UI/UX'].map((mobile, index) => (
+                    {['Android Development', 'Responsive Design', 'UI/UX'].map((mobile, index) => (
                       <div key={index} className="flex items-center gap-2 text-gray-300 text-xs sm:text-sm">
                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full"></div>
                         <span>{mobile}</span>
@@ -199,7 +199,7 @@ export const About = () => {
                     <h4 className="text-lg sm:text-xl font-bold text-white">Specialized Skills</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
-                    {['RISC-V Assembly', 'Game Development', 'AI Integration', 'Performance Optimization'].map((skill, index) => (
+                    {['RISC-V Assembly', 'Game Development',  'JavaFX', 'AI Integration'].map((skill, index) => (
                       <div key={index} className="flex items-center gap-2 text-gray-300 text-xs sm:text-sm">
                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-400 rounded-full"></div>
                         <span>{skill}</span>
