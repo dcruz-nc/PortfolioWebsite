@@ -160,20 +160,26 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Project Stats */}
-                  {project.stats && (
+                  {/* Project Highlights & Learning Outcomes */}
+                  {project.highlights && (
                     <div className="mt-6 pt-6 border-t border-white/10">
-                      <div className="grid grid-cols-3 gap-4 text-center">
-                        {project.stats.map((stat, key) => (
-                          <div key={key} className="group">
-                            <div className="text-2xl font-bold text-blue-400 mb-1 group-hover:scale-110 transition-transform duration-300">
-                              {stat.value}
-                            </div>
-                            <div className="text-gray-400 text-xs uppercase tracking-wider">
-                              {stat.label}
-                            </div>
-                          </div>
-                        ))}
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
+                          <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                          Key Learning Outcomes
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.highlights.map((highlight, index) => (
+                            <span 
+                              key={index}
+                              className="px-3 py-1 text-xs bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-300 rounded-full border border-blue-400/30 hover:scale-105 transition-transform duration-200"
+                            >
+                              {highlight}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -229,10 +235,10 @@ const projectData = [
         icon: "🌐"
       },
     ],
-    stats: [
-      { value: "100%", label: "Responsive" },
-      { value: "5+", label: "Pages" },
-      { value: "24/7", label: "Uptime" }
+    highlights: [
+      "Responsive Design",
+      "Modern UI/UX",
+      "Performance Optimization"
     ]
   },
   {
@@ -251,10 +257,10 @@ const projectData = [
         icon: "🔒"
       },
     ],
-    stats: [
-      { value: "1000+", label: "Downloads" },
-      { value: "4.8★", label: "Rating" },
-      { value: "24/7", label: "Streaming" }
+    highlights: [
+      "Full-Stack Development",
+      "Real-time Features",
+      "Mobile App Architecture"
     ]
   },
   {
@@ -273,10 +279,10 @@ const projectData = [
         icon: "🚀"
       },
     ],
-    stats: [
-      { value: "AI", label: "Powered" },
-      { value: "100+", label: "Cars" },
-      { value: "24/7", label: "Support" }
+    highlights: [
+      "AI Integration",
+      "OpenAI API",
+      "Modern Web Stack"
     ]
   },
   {
@@ -295,10 +301,10 @@ const projectData = [
         icon: "🎮"
       },
     ],
-    stats: [
-      { value: "10+", label: "Levels" },
-      { value: "60fps", label: "Performance" },
-      { value: "1000+", label: "Players" }
+    highlights: [
+      "Game Development",
+      "Physics Engine",
+      "Sprite Animations"
     ]
   },
   {
@@ -317,10 +323,10 @@ const projectData = [
         icon: "📚"
       },
     ],
-    stats: [
-      { value: "50+", label: "Users" },
-      { value: "100+", label: "Notes" },
-      { value: "Real-time", label: "Sync" }
+    highlights: [
+      "Collaborative Features",
+      "Real-time Updates",
+      "Student-Focused Design"
     ]
   },
 ];

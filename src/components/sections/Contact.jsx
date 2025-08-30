@@ -25,7 +25,10 @@ export const Contact = () => {
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          webhookUrl: import.meta.env.VITE_DISCORD_WEBHOOK
+        }),
       });
 
       if (response.ok) {
