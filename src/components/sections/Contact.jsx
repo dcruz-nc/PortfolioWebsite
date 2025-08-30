@@ -61,36 +61,7 @@ export const Contact = () => {
     }
   };
 
-  const contactMethods = [
-    {
-      icon: "📧",
-      title: "Email",
-      value: "dcruz.nc@example.com",
-      link: "mailto:dcruz.nc@example.com",
-      color: "blue"
-    },
-    {
-      icon: "💼",
-      title: "LinkedIn",
-      value: "David Cruz",
-      link: "https://www.linkedin.com/in/david-cruz-b29683258/",
-      color: "cyan"
-    },
-    {
-      icon: "🐙",
-      title: "GitHub",
-      value: "dcruz-nc",
-      link: "https://github.com/dcruz-nc",
-      color: "purple"
-    },
-    {
-      icon: "📱",
-      title: "Phone",
-      value: "+1 (704) 253-0889",
-      link: "tel:+17042530889",
-      color: "green"
-    }
-  ];
+
 
   return (
     <section
@@ -157,33 +128,7 @@ export const Contact = () => {
                  </div>
                </div>
 
-              {/* Contact Methods */}
-              <div className="space-y-4">
-                {contactMethods.map((method, index) => (
-                  <a
-                    key={index}
-                    href={method.link}
-                    target={method.link.startsWith('http') ? "_blank" : "_self"}
-                    rel={method.link.startsWith('http') ? "noopener noreferrer" : ""}
-                    className="group block rounded-2xl p-6 bg-gradient-to-r from-white/5 to-white/3 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.3)]"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className={`text-2xl group-hover:scale-110 transition-transform duration-300`}>
-                        {method.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-white font-semibold mb-1">{method.title}</h4>
-                        <p className="text-gray-300 text-sm">{method.value}</p>
-                      </div>
-                      <div className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
+              
 
 
             </div>
