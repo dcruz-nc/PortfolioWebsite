@@ -32,13 +32,8 @@ export const Home = () => {
 
       <RevealOnScroll>
         <div className="text-center z-10 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 relative max-w-6xl mx-auto">
-          {/* Main content container with enhanced glassmorphism - Mobile optimized */}
-          <div className="relative bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl md:rounded-3xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] p-6 sm:p-8 md:p-12 overflow-hidden">
-            {/* Subtle background pattern */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] opacity-30"></div>
-            
-            {/* Animated underline */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-pulse"></div>
+          {/* Main content container - Mobile optimized */}
+          <div className="relative p-6 sm:p-8 md:p-12">
 
             {/* Greeting text with enhanced typography - Mobile optimized */}
             <div className="mb-6 sm:mb-8">
