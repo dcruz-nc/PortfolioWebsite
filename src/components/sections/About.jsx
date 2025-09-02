@@ -28,17 +28,7 @@ export const About = () => {
             <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto animate-pulse"></div>
           </div>
 
-          {/* Personal Introduction - Mobile optimized */}
-          <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 sm:mb-10 md:mb-12 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500">
-            <div className="text-center max-w-4xl mx-auto">
-              <p className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-light mb-4 sm:mb-6">
-                I'm a passionate <span className="text-blue-400 font-semibold">Software Developer</span> with a strong foundation in computer science and a drive to create innovative solutions that make a difference.
-              </p>
-              <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
-                My journey in technology has been driven by curiosity and a desire to solve complex problems. I believe in writing clean, maintainable code and creating user experiences that are both beautiful and functional.
-              </p>
-            </div>
-          </div>
+
 
           {/* Education Section with Timeline - Mobile optimized */}
           <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 sm:mb-10 md:mb-12 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500">
