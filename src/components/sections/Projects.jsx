@@ -283,8 +283,8 @@ const projectData = [
     status: "completed",
     links: [
       {
-        label: "Private Repo",
-        url: "https://github.com/dcruz-nc",
+        label: "View Project",
+        url: "https://1maginaryonlineandroidshowcase.netlify.app/",
         icon: "🔒"
       },
     ],
