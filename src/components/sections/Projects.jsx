@@ -225,6 +225,31 @@ const getTechColorClasses = (color) => {
 // Enhanced Project Data
 const projectData = [
   {
+    title: "QueenCityBankSim",
+    subtitle: "Full-Stack Banking Platform",
+    icon: "🏦",
+    description: "A simulated digital banking platform built with React and Spring Boot, featuring secure authentication, account management, and transaction workflows with a complete full-stack architecture.",
+    tech: ["React", "Spring Boot", "Java", "Javascript", "PostgreSQL", "Spring Security", "Docker", "Tailwind CSS", "Axios", "Maven", "Vite"],
+    color: "blue",
+    category: "web",
+    status: "in-progress",
+    links: [
+      {
+        label: "Private Repo",
+        url: "https://github.com/dcruz-nc/",
+        icon: "🚀"
+      }
+    ],
+    highlights: [
+      "Full-Stack Architecture",
+      "Secure Authentication",
+      "RESTful API Design",
+      "Database Management",
+      "Docker Containerization",
+      "Modern React Patterns"
+    ]
+  },
+  {
     title: "Cruz Landscaping",
     subtitle: "Professional Business Website",
     icon: "🌿",
@@ -277,7 +302,7 @@ const projectData = [
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "MongoDB", "OpenAI API", "BEM Methodology"],
     color: "blue",
     category: ["ai", "web"],
-    status: "in-progress",
+    status: "completed",
     links: [
       {
         label: "View Project",
