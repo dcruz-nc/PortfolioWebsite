@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import "./index.css";
-import { Navbar } from "./components/Navbar";
+import { ScrollbarNav } from "./components/ScrollbarNav";
+import { MobileMenuButton } from "./components/MobileMenuButton";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
@@ -32,7 +33,8 @@ function App() {
             isLoaded ? "opacity-100" : "opacity-0"
           } bg-black text-gray-100`}
         >
-          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          <ScrollbarNav />
+          <MobileMenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Home />
           <About />
