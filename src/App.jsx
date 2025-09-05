@@ -3,7 +3,7 @@ import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import "./index.css";
 import { ScrollbarNav } from "./components/ScrollbarNav";
-import { MobileMenuButton } from "./components/MobileMenuButton";
+import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
@@ -34,7 +34,7 @@ function App() {
           } bg-black text-gray-100`}
         >
           <ScrollbarNav />
-          <MobileMenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Home />
           <About />

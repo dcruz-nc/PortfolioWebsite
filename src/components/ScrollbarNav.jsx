@@ -48,7 +48,7 @@ export const ScrollbarNav = () => {
   };
 
   return (
-    <nav className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50">
+    <nav className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
       <div className="flex flex-col space-y-4">
         {sections.map((section, index) => (
           <div key={section.id} className="relative group">
