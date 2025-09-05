@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import "./index.css";
+import { ScrollbarNav } from "./components/ScrollbarNav";
 import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
@@ -32,6 +33,7 @@ function App() {
             isLoaded ? "opacity-100" : "opacity-0"
           } bg-black text-gray-100`}
         >
+          <ScrollbarNav />
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Home />
