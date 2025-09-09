@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-// import DarkVeil from "../WebGLDarkVeil";
+import DarkVeil from "../WebGLDarkVeil";
 
 export const Home = () => {
 
@@ -9,16 +9,17 @@ export const Home = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
     >
       {/* DarkVeil as background */}
-      {/* <div style={{ 
+      <div style={{ 
         position: 'absolute', 
         top: 0, 
         left: 0, 
         width: '100%', 
         height: '100%', 
-        zIndex: 0 
+        zIndex: 0,
+        overflow: 'hidden'
       }}>
         <DarkVeil />
-      </div> */}
+      </div>
 
       {/* Floating geometric elements - Mobile optimized */}
       <div className="absolute inset-0 z-0 pointer-events-none">
