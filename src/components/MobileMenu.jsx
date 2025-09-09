@@ -8,15 +8,18 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     { href: "#contact", label: "Contact", description: "Get in touch" }
   ];
 
+
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuOpen && !event.target.closest('.mobile-menu')) {
+      if (menuOpen && !event.target.closest('.mobile-menu') && !event.target.closest('button')) {
         setMenuOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen, setMenuOpen]);
 
@@ -48,23 +51,34 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         onClick={handleClose}
       ></div>
 
-      {/* Menu Container */}
-      <div className={`relative z-50 h-full flex flex-col items-center justify-center transition-all duration-700 ease-out
-        ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-        
-        {/* Enhanced Close Button */}
-        <button
-          onClick={handleClose}
-          className="absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl focus:outline-none cursor-pointer hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 group z-50"
-          aria-label="Close Menu"
-        >
-          <div className="flex items-center justify-center">
-            <span className="group-hover:rotate-90 transition-transform duration-300">×</span>
+      {/* Navbar Header */}
+      <div className="fixed top-0 w-full z-50 bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex justify-between items-center h-16">
+            <a href="#home" className="font-mono text-xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
+              David<span className="text-blue-500 hover:text-cyan-400 transition-colors duration-300">.Cruz</span>
+            </a>
+
+            <button
+              className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 focus:outline-none cursor-pointer z-40 group"
+              onClick={handleClose}
+              aria-label="Close menu"
+              aria-expanded={menuOpen}
+            >
+              <div className="flex items-center justify-center">
+                <span className="text-2xl group-hover:rotate-90 transition-transform duration-300">×</span>
+              </div>
+            </button>
           </div>
-        </button>
+        </div>
+      </div>
+
+      {/* Menu Container */}
+      <div className={`relative z-40 h-full flex flex-col items-center justify-center transition-all duration-700 ease-out pt-16 pointer-events-none
+        ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
 
         {/* Menu Header */}
-        <div className="text-center mb-12 px-6">
+        <div className="text-center mb-12 px-6 pointer-events-auto">
           <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25">
             <span className="text-white text-2xl font-bold">DC</span>
           </div>
@@ -73,7 +87,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         </div>
 
         {/* Menu Items */}
-        <div className="w-full max-w-sm px-6 space-y-4">
+        <div className="w-full max-w-sm px-6 space-y-4 pointer-events-auto">
           {menuItems.map((item, index) => (
             <div
               key={item.href}
@@ -82,7 +96,15 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             >
               <a
                 href={item.href}
-                onClick={handleClose}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClose();
+                  // Smooth scroll to section
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="group block w-full p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
               >
                 <div className="flex items-center space-x-4">
@@ -105,7 +127,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         </div>
 
         {/* Footer Section */}
-        <div className={`mt-12 text-center px-6 transition-all duration-700 ease-out delay-500
+        <div className={`mt-12 text-center px-6 transition-all duration-700 ease-out delay-500 pointer-events-auto
           ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full border border-white/10">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
