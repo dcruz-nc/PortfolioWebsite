@@ -41,7 +41,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <div
-      className={`mobile-menu fixed top-0 left-0 w-full h-screen z-50 transition-all duration-500 ease-out
+      className={`mobile-menu fixed top-0 left-0 w-full h-screen z-50 transition-all duration-500 ease-out md:hidden
         ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
       {/* Backdrop with gradient */}
