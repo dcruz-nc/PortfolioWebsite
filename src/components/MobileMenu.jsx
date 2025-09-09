@@ -83,7 +83,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             <span className="text-white text-2xl font-bold">DC</span>
           </div>
           <h2 className="text-white text-2xl font-bold mb-2">David Cruz</h2>
-          <p className="text-blue-300 text-sm font-medium">Full-Stack Developer</p>
+          <p className="text-gray-400 text-sm font-medium">Full-Stack Developer</p>
         </div>
 
         {/* Menu Items */}
