@@ -3,25 +3,21 @@ import React from "react";
 export const Footer = () => {
   const contactMethods = [
     {
-      icon: "📧",
       title: "Email",
       value: "dcruz.nc@gmail.com",
       link: "mailto:dcruz.nc@gmail.com"
     },
     {
-      icon: "💼",
       title: "LinkedIn",
       value: "David Cruz",
       link: "https://www.linkedin.com/in/david-cruz-b29683258/"
     },
     {
-      icon: "🐙",
       title: "GitHub",
       value: "dcruz-nc",
       link: "https://github.com/dcruz-nc"
     },
     {
-      icon: "📱",
       title: "Phone",
       value: "+1 (704) 253-0889",
       link: "tel:+17042530889"
@@ -54,9 +50,6 @@ export const Footer = () => {
                     rel={method.link.startsWith('http') ? "noopener noreferrer" : ""}
                     className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 active:scale-95"
                   >
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      {method.icon}
-                    </div>
                     <div className="min-w-0 flex-1">
                       <h4 className="text-gray-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-1">
                         {method.title}
@@ -100,10 +93,7 @@ export const Footer = () => {
               © 2024 David Cruz. All rights reserved.
             </p>
             <div className="flex items-center gap-4 sm:gap-6 text-gray-400 text-xs sm:text-sm">
-              <span className="flex items-center gap-2">
-                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="whitespace-nowrap">Available for opportunities</span>
-              </span>
+              <span className="whitespace-nowrap">Available for opportunities</span>
             </div>
           </div>
         </div>
