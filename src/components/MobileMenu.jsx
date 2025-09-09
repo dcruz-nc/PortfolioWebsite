@@ -2,10 +2,10 @@ import { useEffect } from "react";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   const menuItems = [
-    { href: "#home", label: "Home", icon: "🏠", description: "Welcome to my portfolio" },
-    { href: "#about", label: "About", icon: "👨‍💻", description: "Learn more about me" },
-    { href: "#projects", label: "Projects", icon: "🚀", description: "View my work" },
-    { href: "#contact", label: "Contact", icon: "📧", description: "Get in touch" }
+    { href: "#home", label: "Home", description: "Welcome to my portfolio" },
+    { href: "#about", label: "About", description: "Learn more about me" },
+    { href: "#projects", label: "Projects", description: "View my work" },
+    { href: "#contact", label: "Contact", description: "Get in touch" }
   ];
 
   // Close menu when clicking outside
@@ -86,11 +86,6 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                 className="group block w-full p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
               >
                 <div className="flex items-center space-x-4">
-                  {/* Icon Container */}
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-400/20 border border-blue-400/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-xl">{item.icon}</span>
-                  </div>
-                  
                   {/* Text Content */}
                   <div className="flex-1 text-left">
                     <h3 className="text-white text-lg font-semibold group-hover:text-blue-300 transition-colors duration-300">
@@ -99,13 +94,6 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                     <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
                       {item.description}
                     </p>
-                  </div>
-                  
-                  {/* Arrow Icon */}
-                  <div className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
                   </div>
                 </div>
                 
