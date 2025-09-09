@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
     >
       {/* DarkVeil as background */}
       <div style={{ 
@@ -15,7 +15,8 @@ export const Home = () => {
         left: 0, 
         width: '100%', 
         height: '100%', 
-        zIndex: 0 
+        zIndex: 0,
+        overflow: 'hidden'
       }}>
         <DarkVeil />
       </div>
@@ -61,6 +62,13 @@ export const Home = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 md:space-x-8">
               <a
                 href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const projectsElement = document.getElementById('projects');
+                  if (projectsElement) {
+                    projectsElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="group relative bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 sm:py-5 px-6 sm:px-8 md:px-10 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg transition-all duration-500 hover:scale-105 hover:shadow-[0_20px_40px_rgba(59,130,246,0.4)] overflow-hidden w-full sm:w-auto"
               >
                 <span className="relative z-10 flex items-center justify-center sm:justify-start space-x-2">
@@ -74,6 +82,13 @@ export const Home = () => {
               
               <a
                 href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactElement = document.getElementById('contact');
+                  if (contactElement) {
+                    contactElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="group relative bg-transparent border-2 border-white/30 text-white py-4 sm:py-5 px-6 sm:px-8 md:px-10 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] overflow-hidden w-full sm:w-auto"
               >
                 <span className="relative z-10 flex items-center justify-center sm:justify-start space-x-2">

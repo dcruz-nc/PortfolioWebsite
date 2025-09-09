@@ -105,7 +105,6 @@ export const About = () => {
                 {/* Programming Languages */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">💻</div>
                     <h4 className="text-lg sm:text-xl font-bold text-white">Programming Languages</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
@@ -121,7 +120,6 @@ export const About = () => {
                 {/* Web Technologies */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm border border-green-500/20 hover:border-green-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">🌐</div>
                     <h4 className="text-lg sm:text-xl font-bold text-white">Web Technologies</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
@@ -137,7 +135,6 @@ export const About = () => {
                 {/* Databases & APIs */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">🗄️</div>
                     <h4 className="text-lg sm:text-xl font-bold text-white">Databases & APIs</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
@@ -153,7 +150,6 @@ export const About = () => {
                 {/* Development Tools */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">🛠️</div>
                     <h4 className="text-lg sm:text-xl font-bold text-white">Development Tools</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
@@ -169,7 +165,7 @@ export const About = () => {
                 {/* Mobile Development */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm border border-orange-500/20 hover:border-orange-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">📱</div>
+                 
                     <h4 className="text-lg sm:text-xl font-bold text-white">Mobile Development</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
@@ -185,7 +181,7 @@ export const About = () => {
                 {/* Specialized Skills */}
                 <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-pink-500/10 to-pink-600/10 backdrop-blur-sm border border-pink-500/20 hover:border-pink-400/30 transition-all duration-500 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">🚀</div>
+                   
                     <h4 className="text-lg sm:text-xl font-bold text-white">Specialized Skills</h4>
                   </div>
                   <div className="space-y-1 sm:space-y-2">

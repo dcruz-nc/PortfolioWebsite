@@ -106,18 +106,13 @@ export const Projects = () => {
 
                   {/* Project Header - Mobile optimized */}
                   <div className="mb-4 sm:mb-6">
-                    <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">
-                        {project.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
-                          {project.title}
-                        </h3>
-                        {project.subtitle && (
-                          <p className="text-gray-400 text-xs sm:text-sm font-medium">{project.subtitle}</p>
-                        )}
-                      </div>
+                    <div className="mb-3 sm:mb-4">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      {project.subtitle && (
+                        <p className="text-gray-400 text-xs sm:text-sm font-medium">{project.subtitle}</p>
+                      )}
                     </div>
                     
                     <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
@@ -154,7 +149,6 @@ export const Projects = () => {
                         className="group/link relative inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_40px_rgba(59,130,246,0.4)] overflow-hidden"
                       >
                         <span className="relative z-10 flex items-center gap-2">
-                          {link.icon && <span>{link.icon}</span>}
                           {link.label}
                           <svg className="w-3.5 sm:w-4 h-3.5 sm:h-4 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -169,10 +163,7 @@ export const Projects = () => {
                   {project.highlights && (
                     <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
                       <div className="space-y-2 sm:space-y-3">
-                        <h4 className="text-xs sm:text-sm font-semibold text-gray-300 mb-2 sm:mb-3 flex items-center gap-2">
-                          <svg className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                          </svg>
+                        <h4 className="text-xs sm:text-sm font-semibold text-gray-300 mb-2 sm:mb-3">
                           Key Learning Outcomes
                         </h4>
                         <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -196,9 +187,6 @@ export const Projects = () => {
           {/* Call to Action - Mobile optimized */}
           <div className="text-center mt-12 sm:mt-16">
             <div className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full border border-white/10">
-              <svg className="w-4 sm:w-5 h-4 sm:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
               <span className="text-gray-300 font-medium text-sm sm:text-base">More projects coming soon!</span>
             </div>
           </div>
@@ -227,7 +215,6 @@ const projectData = [
   {
     title: "QueenCityBankSim",
     subtitle: "Full-Stack Banking Platform",
-    icon: "🏦",
     description: "A simulated digital banking platform built with React and Spring Boot, featuring secure authentication, account management, and transaction workflows with a complete full-stack architecture.",
     tech: ["React", "Spring Boot", "Java", "Javascript", "PostgreSQL", "Spring Security", "Docker", "Tailwind CSS", "Axios", "Maven", "Vite"],
     color: "blue",
@@ -236,8 +223,7 @@ const projectData = [
     links: [
       {
         label: "Private Repo",
-        url: "https://github.com/dcruz-nc/",
-        icon: "🚀"
+        url: "https://github.com/dcruz-nc/"
       }
     ],
     highlights: [
@@ -252,7 +238,6 @@ const projectData = [
   {
     title: "Cruz Landscaping",
     subtitle: "Professional Business Website",
-    icon: "🌿",
     description: "A professional landscaping website for Cruz Landscaping featuring comprehensive service descriptions, interactive image galleries, seasonal showcases, contact forms, and modern responsive design optimized for all devices.",
     tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Webhooks", "Image Optimization", "Contact Forms"],
     color: "green",
@@ -261,8 +246,7 @@ const projectData = [
     links: [
       {
         label: "View Website",
-        url: "https://cruzlandscaping.netlify.app/",
-        icon: "🌐"
+        url: "https://cruzlandscaping.netlify.app/"
       },
     ],
     highlights: [
@@ -275,7 +259,6 @@ const projectData = [
   {
     title: "1maginary.Online",
     subtitle: "Full-Stack Android Application",
-    icon: "📻",
     description: "A full-stack Android application integrated with 1maginary.fm, featuring live radio streaming, real-time chat, user engagement tools like XP and pinned messages, and seamless background audio playback.",
     tech: ["Java", "Android Development", "Firebase", "REST API", "Real-time Chat"],
     color: "purple",
@@ -284,8 +267,7 @@ const projectData = [
     links: [
              {
          label: "View Project",
-         url: "https://1maginaryonlineandroidshowcase.netlify.app/",
-         icon: "📡"
+         url: "https://1maginaryonlineandroidshowcase.netlify.app/"
        },
     ],
     highlights: [
@@ -297,7 +279,6 @@ const projectData = [
   {
     title: "VoyagerAI",
     subtitle: "AI-Powered Car Rental Platform",
-    icon: "🚐",
     description: "A responsive car rental website that integrates OpenAI to provide AI-powered car recommendations and interactive chatbot features for users with intelligent matching algorithms.",
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "MongoDB", "OpenAI API", "BEM Methodology"],
     color: "blue",
@@ -306,8 +287,7 @@ const projectData = [
     links: [
       {
         label: "View Project",
-        url: "https://voyagerai2.onrender.com/",
-        icon: "🚀"
+        url: "https://voyagerai2.onrender.com/"
       },
     ],
     highlights: [
@@ -319,7 +299,6 @@ const projectData = [
   {
     title: "GraveMan",
     subtitle: "2D Platform Adventure",
-    icon: "🎲",
     description: "A web-based 2D platform game where your objective is to reach the end while dodging spooky enemies with smooth animations and engaging gameplay mechanics.",
     tech: ["HTML5", "CSS3", "JavaScript", "Game Physics", "Sprite Animations", "Level Design"],
     color: "pink",
@@ -328,8 +307,7 @@ const projectData = [
     links: [
       {
         label: "Play Game",
-        url: "https://gravemangame.netlify.app/",
-        icon: "🎮"
+        url: "https://gravemangame.netlify.app/"
       },
     ],
     highlights: [
