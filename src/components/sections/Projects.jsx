@@ -238,8 +238,8 @@ const projectData = [
   {
     title: "Cruz Landscaping",
     subtitle: "Professional Business Website",
-    description: "A professional landscaping website for Cruz Landscaping featuring comprehensive service descriptions, interactive image galleries, seasonal showcases, contact forms, and modern responsive design optimized for all devices.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Webhooks", "Image Optimization", "Contact Forms"],
+    description: "A professional landscaping website for Cruz Landscaping featuring comprehensive service descriptions, interactive image galleries, seasonal showcases, contact forms, and modern responsive design optimized for all devices. Recently enhanced with advanced SEO optimization, lazy loading images, high-resolution image handling, and Google Analytics integration.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Webhooks", "Image Optimization", "Contact Forms", "SEO", "Lazy Loading", "Google Analytics GA4"],
     color: "green",
     category: "web",
     status: "completed",
@@ -253,7 +253,11 @@ const projectData = [
       "Responsive Design",
       "Modern UI/UX",
       "Performance Optimization",
-      "Contact Integration"
+      "Contact Integration",
+      "SEO Optimization",
+      "Lazy Loading Images",
+      "High-Resolution Image Handling",
+      "Google Analytics Integration"
     ]
   },
   {
