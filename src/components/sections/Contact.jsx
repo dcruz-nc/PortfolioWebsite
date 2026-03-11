@@ -32,7 +32,7 @@ export const Contact = () => {
           <div className="flex justify-center">
             <div className="max-w-md w-full rounded-2xl sm:rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] text-center">
               <div className="mb-4 sm:mb-6">
-                <div className="w-32 h-40 sm:w-40 sm:h-56 mb-4 mx-auto overflow-hidden rounded-xl sm:rounded-2xl border-2 border-blue-400/30 shadow-lg">
+                <div className="w-32 h-40 sm:w-40 sm:h-56 mb-4 mx-auto overflow-hidden rounded-xl sm:rounded-2xl shadow-lg">
                   <img 
                     src="/hsprofile.webp" 
                     alt="David Cruz - Full-Stack Developer" 
