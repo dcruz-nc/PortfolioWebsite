@@ -1,32 +1,16 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import DarkVeil from "../WebGLDarkVeil";
 
 export const Home = () => {
-
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
+      className="min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative overflow-hidden"
     >
-      {/* DarkVeil as background */}
-      <div style={{ 
-        position: 'absolute', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
-        zIndex: 0,
-        overflow: 'hidden'
-      }}>
-        <DarkVeil />
-      </div>
-
-      {/* Floating geometric elements - Mobile optimized */}
+      {/* Background decorative elements - matches About, Contact, Projects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-16 left-8 md:top-20 md:left-20 w-20 h-20 md:w-32 md:h-32 border border-blue-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-8 md:top-40 md:right-32 w-16 h-16 md:w-24 md:h-24 border border-cyan-400/20 rotate-45 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-24 left-1/3 md:bottom-32 md:left-1/4 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500/10 to-cyan-400/10 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 right-8 md:top-1/2 md:right-20 w-16 h-16 md:w-20 md:h-20 border border-white/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute top-16 left-8 sm:top-20 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 rounded-full"></div>
+        <div className="absolute bottom-16 right-8 sm:bottom-20 sm:right-20 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-tr from-purple-500/5 to-pink-500/5 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-500/3 to-yellow-500/3 rounded-full"></div>
       </div>
 
 

@@ -29,9 +29,9 @@ export const Projects = () => {
     >
       {/* Background decorative elements - Mobile optimized */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-16 left-8 sm:top-20 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-16 right-8 sm:bottom-20 sm:right-20 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-tr from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-500/3 to-yellow-500/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-16 left-8 sm:top-20 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 rounded-full"></div>
+        <div className="absolute bottom-16 right-8 sm:bottom-20 sm:right-20 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-tr from-purple-500/5 to-pink-500/5 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-500/3 to-yellow-500/3 rounded-full"></div>
       </div>
 
       <RevealOnScroll>
@@ -59,7 +59,7 @@ export const Projects = () => {
                 className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-medium text-sm sm:text-base transition-all duration-300 ${
                   activeFilter === filter.id
                     ? `bg-gradient-to-r from-${filter.color}-500 to-${filter.color}-600 text-white shadow-[0_8px_25px_rgba(59,130,246,0.3)]`
-                    : "bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
+                    : "bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
                 }`}
               >
                 <span className="relative z-10">{filter.label}</span>
@@ -80,7 +80,7 @@ export const Projects = () => {
                 onMouseLeave={() => setHoveredProject(null)}
               >
                 {/* Enhanced Project Card - Mobile optimized */}
-                <div className="relative rounded-2xl sm:rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500 overflow-hidden flex flex-col h-full">
+                <div className="relative rounded-2xl sm:rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-white/5 via-white/3 to-white/5 border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500 overflow-hidden flex flex-col h-full">
                   {/* Background pattern */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)] opacity-30"></div>
                   

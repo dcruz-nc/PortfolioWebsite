@@ -1,5 +1,4 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { useState } from "react";
 
 export const About = () => {
 
@@ -10,28 +9,28 @@ export const About = () => {
     >
       {/* Background decorative elements - Mobile optimized */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-16 right-8 md:top-20 md:right-20 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-16 left-8 md:bottom-20 md:left-20 w-24 h-24 md:w-48 md:h-48 bg-gradient-to-tr from-green-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/3 to-green-500/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-16 right-8 md:top-20 md:right-20 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 rounded-full"></div>
+        <div className="absolute bottom-16 left-8 md:bottom-20 md:left-20 w-24 h-24 md:w-48 md:h-48 bg-gradient-to-tr from-green-500/5 to-blue-500/5 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/3 to-green-500/3 rounded-full"></div>
       </div>
 
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Enhanced Header - Mobile optimized */}
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-blue-400/80 text-sm sm:text-base md:text-lg font-medium tracking-wider uppercase mb-3 sm:mb-4 animate-fade-in">
+            <p className="text-blue-400/80 text-sm sm:text-base md:text-lg font-medium tracking-wider uppercase mb-3 sm:mb-4">
               Get to know me
             </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
               About Me
             </h2>
-            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto animate-pulse"></div>
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto"></div>
           </div>
 
 
 
           {/* Education Section with Timeline - Mobile optimized */}
-          <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 sm:mb-10 md:mb-12 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500">
+          <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 sm:mb-10 md:mb-12 bg-gradient-to-br from-white/5 via-white/3 to-white/5 border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-shadow duration-200">
             <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-white text-center flex items-center justify-center gap-3">
               <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
@@ -42,15 +41,14 @@ export const About = () => {
             <div className="space-y-6 sm:space-y-8">
                              {/* University Row - Mobile optimized */}
                <div className="relative">
-                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0A5F38]/10 to-[#0A5F38]/20 backdrop-blur-sm border border-[#0A5F38]/30 hover:bg-gradient-to-r hover:from-[#0A5F38]/15 hover:to-[#0A5F38]/25 hover:border-[#0A5F38]/40 transition-all duration-500 group">
-                   <div className="relative flex-shrink-0 self-center">
-                     <img 
-                       src="/C_only.png" 
-                       alt="UNC Charlotte Logo" 
-                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 mx-auto"
-                     />
-                     <div className="absolute inset-0 bg-[#0A5F38]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                   </div>
+<div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0A5F38]/10 to-[#0A5F38]/20 border border-[#0A5F38]/30 hover:from-[#0A5F38]/15 hover:to-[#0A5F38]/25 hover:border-[#0A5F38]/40 transition-colors duration-200 group">
+                  <div className="flex-shrink-0 self-center">
+                    <img 
+                      src="/C_only.png" 
+                      alt="UNC Charlotte Logo" 
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-105 transition-transform duration-200 mx-auto"
+                    />
+                  </div>
                    <div className="flex-1 text-center sm:text-left">
                      <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">Bachelor of Science in Computer Science</h4>
                      <p className="text-[#0A5F38] text-base sm:text-lg font-medium">University of North Carolina at Charlotte</p>
@@ -65,15 +63,14 @@ export const About = () => {
 
                              {/* College Row - Mobile optimized */}
                <div className="relative">
-                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#990F4B]/10 to-[#990F4B]/20 backdrop-blur-sm border border-[#990F4B]/30 hover:bg-gradient-to-r hover:from-[#990F4B]/15 hover:to-[#990F4B]/25 hover:border-[#990F4B]/40 transition-all duration-500 group">
-                   <div className="relative flex-shrink-0 self-center">
-                     <img 
-                       src="/mcc_only.png" 
-                       alt="Mitchell Community College Logo" 
-                       className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 mx-auto"
-                     />
-                     <div className="absolute inset-0 bg-[#990F4B]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                   </div>
+<div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#990F4B]/10 to-[#990F4B]/20 border border-[#990F4B]/30 hover:from-[#990F4B]/15 hover:to-[#990F4B]/25 hover:border-[#990F4B]/40 transition-colors duration-200 group">
+                  <div className="flex-shrink-0 self-center">
+                    <img 
+                      src="/mcc_only.png" 
+                      alt="Mitchell Community College Logo" 
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-105 transition-transform duration-200 mx-auto"
+                    />
+                  </div>
                    <div className="flex-1 text-center sm:text-left">
                      <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">Associate in Science</h4>
                      <p className="text-[#990F4B] text-base sm:text-lg font-medium">Mitchell Community College</p>
@@ -89,7 +86,7 @@ export const About = () => {
           </div>
 
                       {/* Enhanced Skills Section - Mobile optimized */}
-            <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white/5 via-white/3 to-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-all duration-500">
+            <div className="rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white/5 via-white/3 to-white/5 border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] transition-shadow duration-200">
               <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-white text-center flex items-center justify-center gap-3">
                 <svg className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -103,7 +100,7 @@ export const About = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {/* Programming Languages */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20 hover:border-blue-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <h4 className="text-lg sm:text-xl font-bold text-white">Programming Languages</h4>
                   </div>
@@ -118,7 +115,7 @@ export const About = () => {
                 </div>
 
                 {/* Web Technologies */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm border border-green-500/20 hover:border-green-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20 hover:border-green-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <h4 className="text-lg sm:text-xl font-bold text-white">Web Technologies</h4>
                   </div>
@@ -133,7 +130,7 @@ export const About = () => {
                 </div>
 
                 {/* Databases & APIs */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20 hover:border-purple-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <h4 className="text-lg sm:text-xl font-bold text-white">Databases & APIs</h4>
                   </div>
@@ -148,7 +145,7 @@ export const About = () => {
                 </div>
 
                 {/* Development Tools */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 border border-cyan-500/20 hover:border-cyan-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <h4 className="text-lg sm:text-xl font-bold text-white">Development Tools</h4>
                   </div>
@@ -163,7 +160,7 @@ export const About = () => {
                 </div>
 
                 {/* Mobile Development */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm border border-orange-500/20 hover:border-orange-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-orange-500/10 to-orange-600/10 border border-orange-500/20 hover:border-orange-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                  
                     <h4 className="text-lg sm:text-xl font-bold text-white">Mobile Development</h4>
@@ -179,7 +176,7 @@ export const About = () => {
                 </div>
 
                 {/* Specialized Skills */}
-                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-pink-500/10 to-pink-600/10 backdrop-blur-sm border border-pink-500/20 hover:border-pink-400/30 transition-all duration-500 group">
+                <div className="rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-gradient-to-br from-pink-500/10 to-pink-600/10 border border-pink-500/20 hover:border-pink-400/30 transition-colors duration-200 group">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                    
                     <h4 className="text-lg sm:text-xl font-bold text-white">Specialized Skills</h4>
